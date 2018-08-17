@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+  def home
+  end
+        
   def webhook
     token = params[:token]
     puts "TEST Webhook token #{token}, webhook #{ENV['WEBHOOK_TOKEN']}, #{token == ENV['WEBHOOK_TOKEN']}"
