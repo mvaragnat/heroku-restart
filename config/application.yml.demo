@@ -1,0 +1,6 @@
+WEBHOOK_TOKEN: "XXX"
+HEROKU_API_TOKEN: 'xxx-xxx-xxx-xxx-xxx'
+HEROKU_APP_NAME: 'xxx'
+SLACK_WEBHOOK: 'https://hooks.slack.com/services/XXX/XXX/XXX'
+SLACK_NOTIF_CHANNEL: '@you'
+WEBSITE_URL: 'https://www.your_app.com'

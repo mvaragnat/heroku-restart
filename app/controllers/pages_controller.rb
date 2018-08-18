@@ -17,14 +17,14 @@ class PagesController < ApplicationController
       if website_up
         puts "Website up"
         SlackServices::Client.new(
-            message: "Website is up",
+            message: "#{ENV['WEBSITE_URL']} is up",
             channel: ENV['SLACK_NOTIF_CHANNEL'],
             icon_emoji: ':muscle:',
             username: 'Heroku Monitor').send
       else
         puts "Website down"
         SlackServices::Client.new(
-            message: "Website is down - restarting",
+            message: "#{ENV['WEBSITE_URL']} is down - restarting",
             channel: ENV['SLACK_NOTIF_CHANNEL'],
             icon_emoji: ':scream:',
             username: 'Heroku Monitor').send
