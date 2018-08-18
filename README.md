@@ -15,7 +15,7 @@ None of these errors should be allowed too much longer in production, but this a
 
 2) Configure the monitoring service webhook to your-heroku-restarter-url.com/webhook/WEBHOOK_TOKEN
 
-3) You may need to write a suitable adapter for your monitoring tool, depending on the payload it sends. Current adapter is for updown.io (great service, highly recommended)
+3) You may need to write a suitable adapter for your monitoring tool, depending on the payload it sends. Current adapter is for [updown.io](https://www.updown.io) (great service, highly recommended)
 
 # PR Welcome
 
