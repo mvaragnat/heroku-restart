@@ -28,9 +28,18 @@ class PagesController < ApplicationController
             channel: ENV['SLACK_NOTIF_CHANNEL'],
             icon_emoji: ':scream:',
             username: 'Heroku Monitor').send
-
-        puts "send restart command to Heroku"
-        HerokuServices::Client.new.restart
+        
+        begin
+          puts "send restart command to Heroku"
+          HerokuServices::Client.new.restart
+        rescue StandardError => e
+          message = "Error when restarting server : #{e}"
+          SlackServices::Client.new(
+            message: message,
+            channel: ENV['SLACK_NOTIF_CHANNEL'],
+            icon_emoji: ':rotating_light:',
+            username: 'Heroku Monitor').send
+        end
       end
     else
       render json: { message: "Wrong token" }, status: :internal_server_error
