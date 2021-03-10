@@ -10,15 +10,14 @@ set -o pipefail
 # Heroku and gzip it
 
 heroku pg:backups:download --output=/tmp/pg_backup.dump --app $HEROKU_APP_NAME
-gzip /tmp/pg_backup.dump
+
+# gzip /tmp/pg_backup.dump
 
 # Encrypt the gzipped backup file
 # using GPG passphrase
-
 # gpg --yes --batch --passphrase=$PG_BACKUP_PASSWORD -c /tmp/pg_backup.dump.gz
 
 # Remove the plaintext backup file
-
 # rm /tmp/pg_backup.dump.gz
 
 # Generate backup filename based
@@ -31,9 +30,9 @@ BACKUP_FILE_NAME="heroku-backup-$(date '+%Y-%m-%d_%H.%M')"
 # AWS CLI
 
 # aws s3 cp /tmp/pg_backup.dump.gz.gpg "s3://${S3_BUCKET}/${BACKUP_FILE_NAME}"
-aws s3 cp /tmp/pg_backup.dump.gz "s3://${S3_BUCKET}/${BACKUP_FILE_NAME}"
+aws s3 cp /tmp/pg_backup.dump "s3://${S3_BUCKET}/${BACKUP_FILE_NAME}"
 
 # Remove the encrypted backup file
 
 # rm /tmp/pg_backup.dump.gz.gpg
-rm /tmp/pg_backup.dump.gz
+rm /tmp/pg_backup.dump
