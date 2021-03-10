@@ -124,7 +124,7 @@ GEM
       heroics (~> 0.0.23)
       moneta (~> 0.8.1)
     public_suffix (3.0.3)
-    puma (3.12.0)
+    puma (3.12.6)
     racc (1.5.2)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -210,7 +210,7 @@ DEPENDENCIES
   heroku-api-postgres (= 0.10.0)
   listen (>= 3.0.5, < 3.2)
   platform-api (= 2.1.0)
-  puma (~> 3.7)
+  puma (~> 3.12)
   rails (= 6.0.3.5)
   rest-client
   selenium-webdriver
