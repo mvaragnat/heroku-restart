@@ -15,6 +15,7 @@ gem 'awesome_print'
 # Heroku
 gem 'heroku-api-postgres', '0.10.0'
 gem 'platform-api', '2.1.0'
+gem 'aws-sdk-s3', '1.91.0'
 
 # HTTP client
 gem 'rest-client'
