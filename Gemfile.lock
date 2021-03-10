@@ -77,7 +77,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.10.0)
     erubis (2.7.0)
-    excon (0.62.0)
+    excon (0.79.0)
     ffi (1.9.25)
     figaro (1.1.1)
       thor (~> 0.14)
