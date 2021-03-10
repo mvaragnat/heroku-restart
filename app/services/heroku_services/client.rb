@@ -7,7 +7,7 @@ module HerokuServices
       end
 
       def client
-        @heroku ||= PlatformAPI.connect_oauth(ENV['HEROKU_API_TOKEN'])
+        @heroku ||= PlatformAPI.connect_oauth(ENV['HEROKU_API_KEY'])
         @heroku
       end
     end
