@@ -1,14 +1,13 @@
 module WebhookAdapters
   class UpdownAdapter
-    def initialize
-    end
+    def initialize; end
 
     # adapters return "false" if the website is down and needs to be restarted
     # "true" otherwise
     def process_events(params)
       events = params['_json']
-      
-      raise "Missing events" if events.blank? || !events.class == Array
+
+      raise 'Missing events' if events.blank? || !events.class == Array
 
       # many events can be sent at once
       # restart server only if one or more down events, and no up event
@@ -28,9 +27,9 @@ module WebhookAdapters
       end
 
       if at_least_one_down && !at_least_one_up
-        return false
+        false
       else
-        return true
+        true
       end
     end
   end

@@ -1,11 +1,10 @@
 module SlackServices
   class Adapter
-    def initialize
-    end
+    def initialize; end
 
     def send(options)
       message = options[:message]
-      raise "Slack message missing" if message.blank?
+      raise 'Slack message missing' if message.blank?
 
       url = ENV['SLACK_WEBHOOK']
       payload = { text: message }

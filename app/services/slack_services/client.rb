@@ -1,6 +1,6 @@
 module SlackServices
   class Client
-    def initialize(options={})
+    def initialize(options = {})
       @options = options
       @adapter = Rails.configuration.slack_adapter.call.new
     end
