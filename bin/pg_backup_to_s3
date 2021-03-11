@@ -23,8 +23,8 @@ heroku pg:backups:download --output=/tmp/pg_backup.dump --app $HEROKU_APP_NAME
 # Generate backup filename based
 # on the current date
 
-# BACKUP_FILE_NAME="heroku-backup-$(date '+%Y-%m-%d_%H.%M').gpg"
-BACKUP_FILE_NAME="heroku-backup-$(date '+%Y-%m-%d_%H.%M')"
+# BACKUP_FILE_NAME="heroku-backup-$(date '+%Y-%m-%d_%H').gpg"
+BACKUP_FILE_NAME="heroku-backup-$(date '+%Y-%m-%d_%H')"
 
 # Upload the file to S3 using
 # AWS CLI
