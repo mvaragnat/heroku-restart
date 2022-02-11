@@ -7,7 +7,7 @@ gem 'rails', '6.0.3.5'
 # gem 'sqlite3'
 # Use Puma as the app server
 gem 'figaro'
-gem 'puma', '3.12.6'
+gem 'puma', '4.3.11'
 
 # Logging
 gem 'awesome_print'
